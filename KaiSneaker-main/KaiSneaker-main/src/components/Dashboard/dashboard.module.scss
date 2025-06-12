@@ -1,0 +1,213 @@
+/*  cardBox */
+.card__box {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+.card__box .card {
+    position: relative;
+    background: var(--white-color);
+    padding: 16px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card__box .card:hover {
+    background: var(--black-color);
+}
+
+.card-numbers {
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--black-color);
+}
+
+.card-name {
+    color: var(--black-color);
+    font-size: 1.4rem;
+    margin-top: 5px;
+}
+
+.card-icon {
+    font-size: 3.5rem;
+    color: var(--black-color);
+}
+
+.card:hover .card-numbers,
+.card:hover .card-name,
+.card:hover .card-icon {
+    color: var(--white-color);
+}
+
+/* CSS details */
+.details {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 30px;
+}
+
+.details-orders {
+    position: relative;
+    min-height: 400px;
+    background: var(--white-color);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    font-size: 1.4rem;
+}
+
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.details-header-heading {
+    font-weight: 600;
+    color: var(--black-color);
+}
+
+.details-header-btn {
+    position: relative;
+    padding: 5px 10px;
+    background: var(--black-color) !important;
+    text-decoration: none;
+    color: var(--white-color) !important;
+    border-radius: 6px;
+}
+
+
+
+.details-table-thead .details-table-thead-list {
+    font-weight: 600;
+}
+
+/* Lấy từ thằng thứ 2 trở về sao "magic" */
+.details-table-tbody+.details-table-tbody {
+    color: var(--black-color);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details-table .details-table-tbody tr:hover {
+    background: var(--black-color);
+    color: var(--white-color);
+}
+
+.details-table tr td {
+    padding: 10px;
+}
+
+.details-table tr td:last-child {
+    text-align: end;
+}
+
+.details-table tr td:nth-child(2) {
+    text-align: center;
+}
+
+.details-table tr td:nth-child(3) {
+    text-align: center;
+}
+
+.status.delivered {
+    padding: 2px 4px;
+    background: #8de02c;
+    color: var(--white-color);
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.status.pending {
+    padding: 2px 4px;
+    background: #f9ca3f;
+    color: var(--white-color);
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.status.return {
+    padding: 2px 4px;
+    background: #f00;
+    color: var(--white-color);
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.status.ingrogress {
+    padding: 2px 4px;
+    background: #1795ce;
+    color: var(--white-color);
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.recent__customers {
+    position: relative;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--white-color);
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+
+.recent__customers .customers-img {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.recent__customers .customers-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recent__customers .recent__customers-table tr td {
+    padding: 12px 10px;
+}
+
+.recent__customers .recent__customers-table tr td h4 {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.recent__customers .recent__customers-table tr td h4 span {
+    font-size: 1.4rem;
+    color: var(--black-color);
+}
+
+.recent__customers .recent__customers-table tr:hover {
+    background: var(--black-color);
+    color: var(--white-color);
+}
+
+.recent__customers .recent__customers-table tr:hover td h4 span {
+    color: var(--white-color);
+}

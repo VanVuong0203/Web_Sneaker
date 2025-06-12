@@ -1,0 +1,94 @@
+// Product
+.account-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 28px 10px 0;
+}
+
+.account-heading {
+    font-size: 1.6rem;
+    padding-left: 60px;
+}
+
+.account-create-btn {
+    padding: 10px 6px;
+    border-radius: 20px;
+    background-color: black;
+    font-size: 1.4rem !important;
+    border: none;
+    color: var(--white-color) !important;
+}
+
+.account-create-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.details-table {
+    border-collapse: collapse;
+}
+
+.details-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.details-title-item {
+    font-weight: 600;
+    padding: 4px 4px;
+    text-align: center;
+    color: var(--black-color);
+}
+
+.details-tbody+.details-tbody {
+    border-top: 1px solid rgba(0, 0, 0, 12%);
+}
+
+.details-content-item {
+    position: relative;
+    padding: 2px 8px;
+    text-align: center;
+    overflow: hidden;
+    max-width: 100px;
+    min-width: 20px;
+    color: var(--black-color);
+}
+
+.details-content-item::after {
+    content: ' ';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    height: 50%;
+    transform: translateY(-50%);
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.details-content-item:nth-child(6)::after,
+.details-content-item:nth-child(7)::after {
+    border-right: none;
+}
+
+.details-content-item-img {
+    width: 100%;
+}
+
+.details-content-item-btn {
+    padding: 8px 8px;
+    height: 30px;
+    border: none;
+    background-color: black;
+    border-radius: 20px;
+    color: var(--white-color) !important;
+}
+
+.details-content-item-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.justify_item {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: justify !important;
+}

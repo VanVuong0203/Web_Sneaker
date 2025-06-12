@@ -1,0 +1,91 @@
+.wrapper {
+    margin-top: 15px;
+    padding-top: 50px;
+    height: 400px;
+    width: 100%;
+    background-color: var(--backgroundColor-footer);
+
+    .inner {
+        min-height: 200px;
+        display: flex;
+        justify-content: space-between;
+        .brand {
+            .logo {
+                width: 80%;
+                height: auto;
+            }
+
+            .slogan {
+                color: var(--text-color-footer);
+                font-size: 1.4rem;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+.contacts {
+    padding-top: 15px;
+    padding-left: 8px;
+
+    .contacts-heading {
+        color: var(--text-heading-footer);
+        font-size: 1.8rem;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    }
+
+    .contact {
+        color: var(--text-color-footer);
+        .contact-item {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            .contact-logo {
+                color: var(--logo-color-footer);
+                font-size: 1.6rem;
+                width: 20px;
+            }
+            .contact-content {
+                padding-left: 8px;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+// copyright
+.copyright {
+    width: 100%;
+    border-top: 1px dashed rgba(255, 255, 255, 0.2);
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .copyright_inner {
+        height: 50px;
+        width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .copyright-text {
+            color: #fff;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        .copyright-contact {
+            .copyright-logo {
+                margin: 0 8px;
+                color: var(--logo-color-footer);
+                opacity: 0.8;
+
+                font-size: 2rem;
+                transition: all 0.25s;
+                &:hover {
+                    color: var(--text-hover-footer);
+                }
+            }
+        }
+    }
+}

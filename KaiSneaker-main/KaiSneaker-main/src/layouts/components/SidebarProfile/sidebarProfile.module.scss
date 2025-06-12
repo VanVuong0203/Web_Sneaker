@@ -1,0 +1,14 @@
+.menu {
+    list-style-type: none;
+    margin-top: 40px;
+    .menu-item {
+        margin: 16px;
+
+        .menu-link {
+            font-size: 1.8rem;
+            .icon {
+                margin: 0 16px 0 0;
+            }
+        }
+    }
+}

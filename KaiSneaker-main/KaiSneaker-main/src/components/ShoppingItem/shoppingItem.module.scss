@@ -1,0 +1,141 @@
+.item {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px 10px;
+
+    .item_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .item_img {
+            width: 100%;
+        }
+    }
+
+    +.item {
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+}
+
+.info {
+    padding-top: 8px;
+
+    .item_name {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+
+    .item_money {
+        font-size: 1.8rem;
+        float: right;
+    }
+
+    .brand {
+        color: var(--text-shopping-brand);
+        margin: 8px 0;
+        font-size: 1.8rem;
+    }
+
+    .options {
+        display: flex;
+        align-items: center;
+
+        .size {
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .size_option {
+                text-align: center;
+                width: 50px;
+                margin: 0 8px;
+                outline: none;
+                border: none;
+
+                option:target {
+                    border: none;
+                }
+            }
+        }
+
+        .info_quantity {
+            height: 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            width: 100px;
+            margin-left: 16px;
+
+            .minus,
+            .plus,
+            .num {
+                width: 100%;
+                user-select: none;
+                text-align: center;
+                font-size: 1.6rem;
+                font-weight: 400;
+                cursor: pointer;
+            }
+
+            .num {
+                border-right: 2px solid rgba(0, 0, 0, 0.2);
+                border-left: 2px solid rgba(0, 0, 0, 0.2);
+                pointer-events: none;
+            }
+        }
+
+        .info_quantity {
+            height: 40px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            width: 100px;
+            margin-left: 16px;
+
+            .minus,
+            .plus,
+            .num {
+                width: 100%;
+                user-select: none;
+                text-align: center;
+                font-size: 1.6rem;
+                font-weight: 400;
+                cursor: pointer;
+            }
+
+            .num {
+                border-right: 2px solid rgba(0, 0, 0, 0.2);
+                border-left: 2px solid rgba(0, 0, 0, 0.2);
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.action {
+    float: right;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+
+    .remove {
+        width: 15px;
+        height: auto;
+        margin: 0 8px;
+        color: var(--text-shopping-brand);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+}

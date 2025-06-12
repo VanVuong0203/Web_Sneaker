@@ -1,0 +1,47 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    padding: 6px 16px;
+    cursor: pointer;
+
+    &:hover {
+        background: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.box_name {
+    width: 100%;
+}
+
+.box_price {
+    .price {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+}
+
+.avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.info {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 12px;
+}
+
+.name {
+    font-size: 1.4rem;
+    font-weight: 500;
+    width: 80%;
+}
+
+.brandname {
+    font-size: 1.4rem;
+    color: rgba(22, 24, 35, 0.5);
+}

@@ -1,0 +1,68 @@
+// Bill
+.bill-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+
+    .bill-heading {
+        font-size: 1.8rem;
+    }
+}
+
+.details-table {
+    width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+
+    .details-title-item {
+        font-weight: 600;
+        padding: 4px 4px;
+        text-align: center;
+        color: var(--black1-color);
+    }
+
+    .details-tbody+.details-tbody {
+        border-top: 1px solid rgba(0, 0, 0, 12%);
+    }
+
+    .details-content-item {
+        position: relative;
+        padding: 2px 0;
+        text-align: center;
+        color: var(--black1-color);
+
+        .product-img {
+            width: 200px;
+        }
+
+        &::after {
+            content: ' ';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            height: 50%;
+            transform: translateY(-50%);
+            border-right: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        &:nth-child(5)::after {
+            border-right: none;
+        }
+    }
+}
+
+.btn_back {
+    background-color: black;
+    color: white !important;
+    margin: 16px 30px;
+    border-radius: 40px;
+    transition: all 0.25s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}

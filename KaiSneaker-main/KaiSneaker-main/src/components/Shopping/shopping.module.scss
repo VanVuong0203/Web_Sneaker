@@ -1,0 +1,68 @@
+.bag {
+    padding-top: 40px;
+    .detail {
+        .detail_heading {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+    }
+
+    /* Summary */
+
+    .summary {
+        .summary-heading {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+        .subtotal {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            .subtotal-title {
+                font-size: 1.8rem;
+                font-weight: 400;
+            }
+            .subtotal-money {
+                font-size: 1.8rem;
+                font-weight: 400;
+            }
+        }
+        .shipping {
+            margin-top: 8px;
+            margin-bottom: 8px;
+            .shipping-title {
+                font-size: 1.8rem;
+                font-weight: 400;
+            }
+            .shipping-money {
+                font-size: 1.8rem;
+                font-weight: 400;
+            }
+        }
+        .total {
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 16px 0;
+            .total-title {
+                font-size: 1.8rem;
+            }
+            .total-money {
+                font-size: 1.8rem;
+            }
+        }
+        .checkout {
+            width: 100%;
+            background: var(--black-color);
+            color: var(--white-color);
+            border-radius: 20px;
+            text-align: center;
+            font-size: 1.8rem;
+            padding: 10px 10px;
+            margin-top: 20px;
+            cursor: pointer;
+            border: none;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

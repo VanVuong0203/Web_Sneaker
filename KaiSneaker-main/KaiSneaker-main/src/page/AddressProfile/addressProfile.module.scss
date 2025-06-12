@@ -1,0 +1,145 @@
+.title {
+    margin: 40px 0;
+}
+
+.action {
+    width: 100%;
+    max-width: 600px;
+
+    .add_btn {
+        padding: 8px;
+        width: 130px;
+        float: right;
+        font-size: 1.6rem;
+        border-radius: 20px;
+        background-color: var(--black-color);
+        color: var(--white-color);
+        transition: all 0.25s;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
+
+// modal
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    .modal-detail {
+        width: 600px;
+        padding: 8px;
+        background-color: #fff;
+        border-radius: 20px;
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+
+            .modal-heading {
+                font-size: 2rem;
+            }
+
+            .modal--close {
+                font-size: 2rem;
+                background-color: #bfbfbf;
+                padding: 8px 12px;
+                border-radius: 50%;
+            }
+
+            .modal--close:hover {
+                opacity: 0.9;
+                cursor: pointer;
+            }
+        }
+
+        .stock-list {
+            font-size: 1.4rem;
+            text-align: center;
+
+            .info {
+                .stock-select {
+                    width: 460px;
+                    padding: 12px 0 12px 26px;
+                    margin-bottom: 8px;
+                    border-radius: 8px;
+                }
+
+                .input-label {
+                    margin-left: 18px;
+                    font-size: 1.4rem;
+                    padding: 0 8px;
+                    background: white;
+                    position: absolute;
+                    color: var(--black1-color);
+                }
+
+                .mt-10 {
+                    margin-top: -10px;
+                }
+
+                .input-item {
+                    color: var(--black1-color);
+                    font-size: 1.4rem;
+                    width: 460px;
+                    padding: 12px 0 12px 26px;
+                    margin: 10px 0;
+                    border: 2px solid #000;
+                    border-color: rgba(0, 0, 0, 12%);
+                    border-radius: 8px;
+                }
+            }
+        }
+
+        .btn {
+            font-size: 1.4rem;
+            float: right;
+            margin: 0px 68px 0 0;
+            padding: 10px 22px;
+            border-radius: 20px;
+            background-color: #000;
+            border: none;
+            color: white;
+            transition: all 0.25s;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.8;
+            }
+
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+
+    }
+}
+
+.error_message {
+    color: var(--red-color);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.modal.open {
+    display: flex;
+}

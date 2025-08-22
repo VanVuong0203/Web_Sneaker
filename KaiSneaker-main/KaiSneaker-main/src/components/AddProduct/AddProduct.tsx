@@ -48,7 +48,7 @@ const AddProduct = () => {
             brand: ""
         };
         if (!dataProduct.shoesName.trim()) {
-            errors.shoesName = "Tên sản phẩm không được để trống";
+            errors.shoesName = "Tên sản phẩm không được để trống nha";
         }
         if (!dataProduct.shoesPrice) {
             errors.shoesPrice = "Giá sản phẩm không được để trống nhé";
@@ -376,7 +376,7 @@ const AddProduct = () => {
                                 <CKEditor
                                     editor={ClassicEditor as any}
                                     data={location.state?.data ? location.state?.data?.shoesDescription : ''}
-                                    onChange={(e, editor: any) => {
+                                    onChange={(editor: any) => {
                                         const data = editor.getData();
                                         setDataProduct({ ...dataProduct, shoesDescription: data });
                                     }}

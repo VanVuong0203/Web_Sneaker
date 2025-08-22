@@ -51,7 +51,7 @@ const AddProduct = () => {
             errors.shoesName = "Tên sản phẩm không được để trống";
         }
         if (!dataProduct.shoesPrice) {
-            errors.shoesPrice = "Giá sản phẩm không được để trống";
+            errors.shoesPrice = "Giá sản phẩm không được để trống nhé";
         } else if (dataProduct.shoesPrice <= 0) {
             errors.shoesPrice = "Giá sản phẩm phải lớn hơn 0";
         }

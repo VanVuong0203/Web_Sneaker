@@ -37,10 +37,11 @@ const Header = () => {
         {
             icon: <FontAwesomeIcon icon={faUser} />,
             title: userData?.role?.roleName === "ADMIN"
-                && 'Thông tin tài khoản',
+                ? 'Thông tin tài khoản'
+                : 'Thông tin tài khoản',
             to: userData?.role?.roleName === "ADMIN"
-                && `/@${userData?.idAccount}/profile`,
-
+                ? `/@${userData?.idAccount}/profile`
+                : `/@${userData?.idAccount}/profile`,
         },
         {
             icon: <FontAwesomeIcon icon={faUser} />,
@@ -50,7 +51,6 @@ const Header = () => {
             to: userData?.role?.roleName === "ADMIN"
                 ? `/admin/dashboard`
                 : `/@${userData?.idAccount}/profile`,
-
         },
         {
             icon: <FontAwesomeIcon icon={faSignOut} />,

@@ -22,7 +22,7 @@ const ShoppingItem: React.FC<ShoppingItemProps> = ({ itemCart, getShoppingCart, 
         try {
             if (window.confirm('Bạn có chắc chắc muốn xóa sản phẩm khỏi giỏ hàng không ?')) {
                 const res = await deleteCart(itemCart.idCartItem);
-                console.log(res);
+                // console.log(res);
 
                 if (res.data.success) {
                     getShoppingCart();

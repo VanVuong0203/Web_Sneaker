@@ -70,7 +70,6 @@ const App = () => {
               <Route path="" element={<ProfileAccount />}>
                 <Route path="/:nickname/profile" element={<Profile />} /> {/* Thông tin tài khoản */}
                 <Route path="/:nickname/address-shipping" element={<AddressProfile />} /> {/* Địa chỉ giao hàng */}
-                <Route path="/:nickname/address-shipping" element={<AddressProfile />} /> {/* Địa chỉ giao hàng */}
               </Route>
               <Route path="/:nickname" element={<ShoppingCart />} >
                 <Route path="shopping-cart" element={<Shopping />} /> {/* Giỏ hàng */}

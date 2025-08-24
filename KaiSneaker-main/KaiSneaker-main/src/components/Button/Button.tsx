@@ -8,7 +8,7 @@ const cx = classNames.bind(styles);
 // Định nghĩa kiểu cho props của Button
 interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
     to?: string
-    state?: any;  // <-- cho phép object
+    state?: Record<string, unknown>;  // <-- cho phép object
     href?: string;            // Để sử dụng với thẻ <a>
     primary?: boolean;        // Để kiểm tra kiểu primary button
     outline?: boolean;        // Để kiểm tra kiểu outline button
@@ -42,7 +42,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
     ...passProps
 }: ButtonProps, ref) => {
     let Comp: React.ElementType = 'button'; // Mặc định là button
-    const props: any = {
+    const props: Record<string, unknown> = {
         onClick,
         ref,
         ...passProps,

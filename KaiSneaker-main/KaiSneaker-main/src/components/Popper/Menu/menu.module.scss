@@ -3,6 +3,8 @@
 
     .menu-item {
         margin-left: 0;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 }
 
@@ -10,14 +12,31 @@
     padding-bottom: 8px;
 }
 
-// Menu items
+// Menu items - căn thẳng hàng hoàn hảo
 .menu-item {
-    width: 100%;
-    justify-content: flex-start;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
     border-radius: 0;
     padding: 8px 16px;
     line-height: 1.8rem;
     font-weight: 600;
+    text-align: left !important;
+
+    // Đảm bảo icon và text thẳng hàng
+    .icon {
+        margin-right: 8px !important;
+        flex-shrink: 0 !important;
+        width: 24px !important;
+        text-align: center !important;
+    }
+
+    .title {
+        text-align: left !important;
+        flex: 1 !important;
+        margin-left: 0 !important;
+    }
 
     &.separate {
         border-top: 1px solid rgba(22, 24, 35, 0.12);
@@ -26,6 +45,25 @@
     &:hover {
         background-color: var(--subitem-hover);
     }
+}
+
+// Ghi đè hoàn toàn Button component styles
+.menu-item.wrapper {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+// Đảm bảo tất cả elements được căn thẳng hàng
+.menu-item * {
+    text-align: left !important;
+}
+
+// Fix cho icon và text alignment
+.menu-item .icon+.title {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
 }
 
 .back-btn {

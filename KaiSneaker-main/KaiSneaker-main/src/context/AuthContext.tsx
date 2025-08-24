@@ -63,7 +63,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             setShoppingCartLength(res.data.result.length);
           }
         }
-      } catch (error: any) {
+      } catch (error: unknown) {
         setShoppingCartLength(0);
 
       }

@@ -2,15 +2,14 @@
     height: var(--height-header);
     background-color: white;
     position: fixed;
-    border: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 12px rgb(0 0 0 / 10%);
-    right: 0;
     top: 0;
     left: 0;
-    z-index: 20;
+    right: 0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 1px 12px rgb(0 0 0 / 10%);
 
     .logo_box {
         display: flex;
@@ -26,6 +25,7 @@
 .actions {
     display: flex;
     align-items: center;
+    gap: 16px;
 }
 
 .account-btn {
@@ -34,7 +34,6 @@
     font-size: 2rem !important;
     padding: 4px 8px !important;
     margin-inline: 8px !important;
-
     background-color: transparent;
     cursor: pointer;
 }
@@ -44,9 +43,18 @@
     color: var(--black-color);
     opacity: 0.9;
     background-color: transparent;
-    padding: 4px 10px;
+    padding: 8px 12px;
     cursor: pointer;
     position: relative;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    z-index: 24;
+
+    &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+        background-color: rgba(0, 0, 0, 0.05);
+    }
 }
 
 .badge {
@@ -60,10 +68,58 @@
     font-size: 1.6rem;
     font-weight: 600;
     text-align: center;
-    z-index: -1;
-    border: 1px solid var(--black-color);
+    z-index: 25;
+    background-color: var(--white-color);
+    border: 2px solid var(--black-color);
     color: var(--black-color);
     overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+// Tippy tooltip styles - gọn gàng
+:global(.tippy-box) {
+    z-index: 9999 !important;
+    background-color: var(--white-color) !important;
+    color: var(--black-color) !important;
+    border-radius: 8px !important;
+    font-size: 1.4rem !important;
+    font-weight: 500 !important;
+    padding: 4px 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    position: absolute !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    white-space: nowrap !important;
+}
+
+:global(.tippy-arrow) {
+    color: var(--white-color) !important;
+}
+
+:global(.tippy-content) {
+    padding: 0 !important;
+    text-align: center !important;
+    font-weight: 500 !important;
+}
+
+:global(.tippy-portal) {
+    z-index: 9999 !important;
+    position: fixed !important;
+}
+
+// Tooltip positioning fixes
+:global(.tippy-box[data-placement='bottom-start']) {
+    margin-top: 0 !important;
+    transform: translateX(-12px) !important;
+}
+
+// Đảm bảo tooltip sát với icon
+:global(.tippy-box[data-placement='bottom-start'] .tippy-arrow) {
+    left: 20px !important;
+}
+
+// Tooltip hiển thị sát với icon
+:global(.tippy-box[data-placement='bottom-start']) {
+    margin-left: -8px !important;
 }
 
 .user-avatar {
@@ -73,4 +129,10 @@
     border-radius: 50%;
     margin-inline: 12px;
     cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 }

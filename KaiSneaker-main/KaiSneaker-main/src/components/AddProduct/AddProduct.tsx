@@ -4,7 +4,6 @@ import Button from '~/components/Button/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp, faChevronDown, faChevronUp, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
-import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 import { useLocation } from 'react-router-dom';
@@ -48,14 +47,11 @@ const AddProduct = () => {
             brand: ""
         };
         if (!dataProduct.shoesName.trim()) {
-<<<<<<< HEAD
-            errors.shoesName = "Tên sản phẩm không được để trống nha";
-=======
-            errors.shoesName = "Tên sản phẩm không được để trống nhé";
->>>>>>> cc24ccb71e1017f867c0897e95876924aaf953fd
+            errors.shoesName = "Tên sản phẩm không được để trống";
+            errors.shoesName = "Tên sản phẩm không được để trống";
         }
         if (!dataProduct.shoesPrice) {
-            errors.shoesPrice = "Giá sản phẩm không được để trống nhé";
+            errors.shoesPrice = "Giá sản phẩm không được để trống";
         } else if (dataProduct.shoesPrice <= 0) {
             errors.shoesPrice = "Giá sản phẩm phải lớn hơn 0";
         }
@@ -377,18 +373,12 @@ const AddProduct = () => {
                         <div className={cx('description_item')}>
                             <h2 className={cx('item_heading')}>Mô tả sản phẩm</h2>
                             <div className={cx('item_content')}>
-                                <CKEditor
-                                    editor={ClassicEditor as any}
-                                    data={location.state?.data ? location.state?.data?.shoesDescription : ''}
-<<<<<<< HEAD
-                                    onChange={(editor: any) => {
-=======
-                                    onChange={( editor: any) => {
->>>>>>> cc24ccb71e1017f867c0897e95876924aaf953fd
-                                        const data = editor.getData();
-                                        setDataProduct({ ...dataProduct, shoesDescription: data });
-                                    }}
-                                />
+                                editor={ClassicEditor as any}
+                                data={location.state?.data ? location.state?.data?.shoesDescription : ''}
+                                onChange={(editor: any) => {
+                                    const data = editor.getData();
+                                    setDataProduct({ ...dataProduct, shoesDescription: data });
+                                }}
                             </div>
                         </div>
                     </div>
